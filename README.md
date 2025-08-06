@@ -42,8 +42,10 @@ Rabbit is a fully functional **E-commerce Web Application** built using the **ME
 ## ⚙️ How to Run Locally
 
 ### 1. Clone the repo
-git clone https://github.com/your-username/rabbit.git<br/>
+```bash
+git clone https://github.com/Sankalp-2003/Rabbit.git
 cd rabbit
+```
 
 ### 2. Setup Backend
 ```bash
