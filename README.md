@@ -46,15 +46,19 @@ git clone https://github.com/your-username/rabbit.git<br/>
 cd rabbit
 
 ### 2. Setup Backend
-cd server<br/>
-npm install<br/>
-# Add .env file with necessary MongoDB URI, JWT secret, Cloudinary keys, etc.<br/>
+```bash
+cd server
+npm install
+# Add .env file with necessary MongoDB URI, JWT secret, Cloudinary keys, etc.
 npm start
+```
 
 ### 3. Setup Frontend
-cd client<br/>
-npm install<br/>
+```bash
+cd client
+npm install
 npm atart
+```
 
 ### 🛠️ Deployment
 **Frontend is deployed on Vercel:**
