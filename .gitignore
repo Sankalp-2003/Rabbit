@@ -3,8 +3,8 @@ logs
 *.logs
 
 # Node modules
-client/node_modules
-server/node_modules
+client/node_modules/
+server/node_modules/
 
 # Environment Variables
 client/.env

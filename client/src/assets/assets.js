@@ -5,6 +5,7 @@ import mensCollection from "./mens-collection.webp";
 import womensCollection from "./womens-collection.webp";
 import register from "./register.webp";
 import login from "./login.webp";
+import logo from "./logo-full.png";
 
 export const assets = {
   heroImg,
@@ -13,6 +14,7 @@ export const assets = {
   womensCollection,
   register,
   login,
+  logo,
 };
 
 export const CATEGORIES = ["Top Wear", "Bottom Wear"];
