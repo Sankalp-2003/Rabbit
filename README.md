@@ -42,23 +42,23 @@ Rabbit is a fully functional **E-commerce Web Application** built using the **ME
 ## ⚙️ How to Run Locally
 
 ### 1. Clone the repo
-git clone https://github.com/your-username/rabbit.git
+git clone https://github.com/your-username/rabbit.git<br/>
 cd rabbit
 
 ### 2. Setup Backend
-cd server
-npm install
-# Add .env file with necessary MongoDB URI, JWT secret, Cloudinary keys, etc.
+cd server<br/>
+npm install<br/>
+# Add .env file with necessary MongoDB URI, JWT secret, Cloudinary keys, etc.<br/>
 npm start
 
 ### 3. Setup Frontend
-cd client
-npm install
+cd client<br/>
+npm install<br/>
 npm atart
 
 ### 🛠️ Deployment
 **Frontend is deployed on Vercel:**
-https://rabbit-ko9q.vercel.app/
+https://rabbit-ko9q.vercel.app/<br/>
 Backend can be deployed on platforms like Render, Railway, or Heroku (based on your setup).
 
 ### 🙌 Acknowledgements
@@ -72,6 +72,6 @@ Backend can be deployed on platforms like Render, Railway, or Heroku (based on y
 ### 📧 Contact
 For any questions or feedback, feel free to reach out!
 
-Developer: Sankalp
-LinkedIn: https://www.linkedin.com/in/sankalpkundapur/
+Developer: Sankalp<br/>
+LinkedIn: https://www.linkedin.com/in/sankalpkundapur/<br/>
 Email: sankalpkundapur2003@gmail.com
