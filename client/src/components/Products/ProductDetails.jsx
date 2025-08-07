@@ -80,10 +80,6 @@ const ProductDetails = ({ productId }) => {
     }
   }, [selectedProduct]);
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
-
   if (error) {
     return <ErrorMessage error={error} />;
   }

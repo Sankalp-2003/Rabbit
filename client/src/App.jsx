@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import UserLayout from "./components/Layout/UserLayout";
 import Home from "./pages/Home";
 import { Toaster } from "sonner";
@@ -22,48 +22,49 @@ import OrderManagement from "./components/Admin/OrderManagement";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import ProtectedRoute from "./components/Common/ProtectedRoute";
+import { useEffect } from "react";
 
 const App = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
     <Provider store={store}>
-      <BrowserRouter>
-        <Toaster position="top-right" />
-        <Routes>
-          <Route path="/" element={<UserLayout />}>
-            <Route index element={<Home />} />
-            <Route path="login" element={<Login />} />
-            <Route path="register" element={<Register />} />
-            <Route path="profile" element={<Profile />} />
-            <Route
-              path="collections/:collection"
-              element={<CollectionPage />}
-            />
-            <Route path="product/:id" element={<ProductDetails />} />
-            <Route path="checkout" element={<Checkout />} />
-            <Route
-              path="order-confirmation"
-              element={<OrderConfirmationPage />}
-            />
-            <Route path="order/:id" element={<OrderDetailsPage />} />
-            <Route path="my-orders" element={<MyOrdersPage />} />
-          </Route>
-
+      <Toaster position="top-right" />
+      <Routes>
+        <Route path="/" element={<UserLayout />}>
+          <Route index element={<Home />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="collections/:collection" element={<CollectionPage />} />
+          <Route path="product/:id" element={<ProductDetails />} />
+          <Route path="checkout" element={<Checkout />} />
           <Route
-            path="/admin"
-            element={
-              <ProtectedRoute role="admin">
-                <AdminLayout />
-              </ProtectedRoute>
-            }
-          >
-            <Route index element={<AdminHomePage />} />
-            <Route path="users" element={<UserManagement />} />
-            <Route path="products" element={<ProductManagement />} />
-            <Route path="products/:id/edit" element={<EditProductPage />} />
-            <Route path="orders" element={<OrderManagement />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+            path="order-confirmation"
+            element={<OrderConfirmationPage />}
+          />
+          <Route path="order/:id" element={<OrderDetailsPage />} />
+          <Route path="my-orders" element={<MyOrdersPage />} />
+        </Route>
+
+        <Route
+          path="/admin"
+          element={
+            <ProtectedRoute role="admin">
+              <AdminLayout />
+            </ProtectedRoute>
+          }
+        >
+          <Route index element={<AdminHomePage />} />
+          <Route path="users" element={<UserManagement />} />
+          <Route path="products" element={<ProductManagement />} />
+          <Route path="products/:id/edit" element={<EditProductPage />} />
+          <Route path="orders" element={<OrderManagement />} />
+        </Route>
+      </Routes>
     </Provider>
   );
 };
